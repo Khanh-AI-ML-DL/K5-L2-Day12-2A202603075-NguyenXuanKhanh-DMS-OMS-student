@@ -1,0 +1,7 @@
+File: export_final.zip · chỉ kiểm ảnh: D01, D02
+Ảnh: 2 · đã có frame_meta: 2 · số đối tượng: face=1, face13=1, hand=2, person=2
+  [ERROR] D01.png: hand: 2 tay whose=driver cùng side=right. side là trái/phải của chính người đó (không theo phía ảnh): mỗi người chỉ có 1 tay trái, 1 tay phải
+  [WARN] D01.png: eye_left=unknown nhưng không điểm left_eye_* nào có cờ occluded/outside: nếu mắt bị che thì bật occluded, nếu thấy rõ thì chọn open/closed
+  [WARN] D01.png: eye_right=unknown nhưng không điểm right_eye_* nào có cờ occluded/outside: nếu mắt bị che thì bật occluded, nếu thấy rõ thì chọn open/closed
+Kết quả: 1 lỗi, 2 cảnh báo. Cảnh báo cần bạn tự xét, không tự động là sai.
+Ghi chú: chạy bù từ export_final.zip (bản trước khi sửa) sau khi gán xong 22 ảnh, không export riêng part_B.zip tại checkpoint. Lỗi tay D01 đã sửa ở export_final_v2.zip.

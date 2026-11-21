@@ -1,0 +1,7 @@
+frame_id,source,phenomenon,affected_field,effect_on_label
+D03,real_IR,"Cả hai mắt bị che (đốm phản xạ hoặc tròng kính): 7/8 điểm mắt đánh occluded (cả 4 điểm mắt trái, 3 trong 4 điểm mắt phải)","eye_left, eye_right, face13 left_eye_* / right_eye_*","eye_left và eye_right = unknown, không ghi closed; điểm mắt bị che bật occluded"
+D04,real_IR,"Mắt trái không thấy được (bị che bởi kính hoặc phản xạ), mắt phải vẫn thấy","eye_left, face13 left_eye_*",eye_left = unknown (không ghi open hay closed); 4 điểm mắt trái bật outside; eye_right = open
+D05,real_IR,"Ảnh NIR chỉ có độ sáng, không có màu, đèn LED chiếu liên tục nên không có căn cứ rõ để biết ngày hay đêm",frame_meta.light,"Mình ghi light = day theo cảm giác, bản của Nguyên ghi unknown. Ca mơ hồ, đã đưa vào câu hỏi leo thang số 2 trong class_list_v0.md"
+S05_ir,IR_sim,eye_right = unknown ở cả S05_rgb lẫn S05_ir: ảnh RGB cùng cảnh cũng không phân biệt được mắt phải,face.eye_right,"Giữ unknown ở cả hai ảnh, không suy từ ảnh kia (4.4-1). Trường này không mất thêm do chuyển sang IR-sim"
+S07_ir,IR_sim,"Mắt trái của người ở rear_right và cả hai mắt của người ở rear_left = unknown, giống hệt S07_rgb","face.eye_left, face.eye_right","Giữ unknown ở cả hai ảnh. Không ghi hiện tượng IR thật (chói kính, mắt sáng) cho ảnh S## vì IR-sim không tái hiện (GUIDE §3)"
+S01_ir,IR_sim,"SVIRO không ai thắt dây an toàn; ở cả S01_rgb và S01_ir mình ghi not_worn, không có worn_*",person.seatbelt,"Chỉ dùng not_worn hoặc unknown (GUIDE §3, 4.7). Cần xác nhận lại trên ảnh: nếu dây không nhìn rõ thì đổi sang unknown"
