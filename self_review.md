@@ -13,7 +13,6 @@ Loại lỗi: `seat_flip`, `wrong_class`, `guess`, `box`, `missing`, `extra`, `l
 | D01.png | hand | `lr_flip` | Mình gán cả 2 tay của tài xế là `side = right`. `side` là trái/phải của chính người đó, mỗi người chỉ có 1 tay trái và 1 tay phải (4.7). `cabin_check` báo ERROR. | Đã sửa ở v2 (một tay đổi thành `left`) |
 | D04.png | face, eye_left | `flag` | Mình để `eye_left = open` nhưng cả 4 điểm `left_eye_*` đều bị che. Không thấy mắt thì phải là `unknown` (4.4-1). | Đã sửa ở v2 (`eye_left = unknown`) |
 
-Các lỗi cùng loại ở ảnh khác: S01 còn lỗi `guess` ở `light` (mình điền `day`, đúng ra là `unknown`, 4.1); D01 và D03 có mắt `unknown` nhưng điểm mắt không có cờ `occluded`/`outside`. Cả hai đã sửa ở v2.
 
 ## 2. Lỗi mình lặp lại nhiều nhất hôm nay
 
