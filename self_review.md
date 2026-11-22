@@ -17,7 +17,7 @@ Các lỗi cùng loại ở ảnh khác: S01 còn lỗi `guess` ở `light` (mì
 
 ## 2. Lỗi mình lặp lại nhiều nhất hôm nay
 
-Lỗi: Điền `light` (`day` hoặc `night`) cho cả 16 ảnh SVIRO (S01 đến S08, bản `_rgb` và `_ir`), trong khi ảnh dựng thì `light` phải là `unknown` (Guideline 4.1, GUIDE §3). `check_final.txt` có 16 cảnh báo loại này, nhiều nhất trong các lỗi.
+Lỗi: Điền `light` (`day` hoặc `night`) cho cả 16 ảnh SVIRO (S01 đến S08, bản `_rgb` và `_ir`), trong khi ảnh dựng thì `light` phải là `unknown` (Guideline 4.1, GUIDE 3). `check_final.txt` có 16 cảnh báo loại này, nhiều nhất trong các lỗi.
 
 Vì sao mình mắc: Mình gán `light` theo cảm giác khi nhìn từng ảnh mà không áp luật riêng của ảnh dựng, rồi lặp lại cho các ảnh sau. Mình cũng chỉ chạy `cabin_check` sau khi đã gán xong cả 22 ảnh (checkpoint A và B chạy bù từ `export_final.zip`), nên lỗi không bị chặn từ S01 mà lặp 16 lần.
 
@@ -27,7 +27,7 @@ Lỗi thứ hai, nặng hơn về nội dung và chưa sửa: hai lỗi mà `cab
 
 ## 3. Ghi chú về disagreement_log
 
-Một dòng bạn của mình đúng và mình sai: **S01, `infant_seat`, trường `seat`** (mình `rear_left`, bạn `rear_right`). Box nằm ở nửa trái ảnh nên theo 4.4-3 phải là `rear_right`. Mình học được: ghế phải gọi theo xe, không theo ảnh. Mình gán đúng người ở nửa phải ảnh là `rear_left` nhưng lại gán sai ghế em bé trong cùng một ảnh, nên cần kiểm từng box thay vì tin cả ảnh. Lỗi này vẫn còn trong `export_final_v2.zip`, ghi ở đây theo RULES §6.
+Một dòng bạn của mình đúng và mình sai: **S01, `infant_seat`, trường `seat`** (mình `rear_left`, bạn `rear_right`). Box nằm ở nửa trái ảnh nên theo 4.4-3 phải là `rear_right`. Mình học được: ghế phải gọi theo xe, không theo ảnh. Mình gán đúng người ở nửa phải ảnh là `rear_left` nhưng lại gán sai ghế em bé trong cùng một ảnh, nên cần kiểm từng box thay vì tin cả ảnh. Lỗi này vẫn còn trong `export_final_v2.zip`, ghi ở đây theo RULES 6.
 
 Dòng thứ hai: **D01, `hand`, `side`** (mình `right`, bạn `left`). Bạn đúng vì `side` theo người và mỗi người chỉ có một tay mỗi bên. Đã sửa ở v2.
 
