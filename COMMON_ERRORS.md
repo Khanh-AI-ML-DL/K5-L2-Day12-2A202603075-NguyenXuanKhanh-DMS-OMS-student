@@ -2,7 +2,7 @@
 
 Tra bảng này trước khi hỏi coach. Cột "Tự kiểm" chỉ ra cách bạn tự phát hiện lỗi.
 
-## OMS (S##, SVIRO)
+## OMS 
 
 | Lỗi | Dấu hiệu | Tự kiểm / cách gỡ |
 |---|---|---|
@@ -16,7 +16,7 @@ Tra bảng này trước khi hỏi coach. Cột "Tự kiểm" chỉ ra cách b�
 | Đoán `seatbelt` trên ảnh RGB tối | RGB và IR cùng cảnh có giá trị giống nhau dù RGB không thấy dây | Luật chung 1: không thấy thì `unknown`. Ghi khác biệt vào `ir_log` |
 | Chai nước hay ví ghi là `phone` | Box `phone` ở tay hoặc ghế | Chỉ ghi `phone` khi thấy cạnh, góc hoặc màn hình điện thoại. Không chắc: DMS thì không vẽ; OMS thì `object` (type `other`) |
 
-## DMS (D##, Drive&Act)
+## DMS
 
 | Lỗi | Dấu hiệu | Tự kiểm / cách gỡ |
 |---|---|---|
@@ -34,7 +34,7 @@ Tra bảng này trước khi hỏi coach. Cột "Tự kiểm" chỉ ra cách b�
 | Lỗi | Dấu hiệu | Tự kiểm / cách gỡ |
 |---|---|---|
 | Box mới có sẵn `seat = driver` | CVAT điền giá trị đầu danh sách cho mọi thuộc tính | Vẽ xong box nào, mở **DETAILS** chọn lại `seat` ngay. Trên SVIRO, `cabin_check` cảnh báo `seat=driver` |
-| `face13` mới vẽ nằm thẳng đứng như mặt nhìn thẳng | CVAT đặt template 13 điểm theo chiều đứng | Trên D## xoay 90°, kéo từng điểm về đúng chỗ: mắt trái có y lớn hơn. `cabin_check` chỉ so trục x nên không tự bắt được template đặt sai chiều |
+| `face13` mới vẽ nằm thẳng đứng như mặt nhìn thẳng | CVAT đặt template 13 điểm theo chiều đứng | Xoay 90°, kéo từng điểm về đúng chỗ: mắt trái có y lớn hơn. `cabin_check` chỉ so trục x nên không tự bắt được template đặt sai chiều |
 | Quên tag `frame_meta` | `cabin_check` ERROR "thiếu frame_meta" | Đặt tag **trước** khi vẽ box đầu tiên của mỗi ảnh |
 | `modality` sai | Ảnh `_ir` ghi `rgb` | Nhìn tên file. D## đều là `ir` |
 | Export kèm ảnh | Zip nặng hàng chục MB | Bỏ chọn "Save images" khi export. `python -m zipfile -l export_final.zip` chỉ được thấy `annotations.xml` |
